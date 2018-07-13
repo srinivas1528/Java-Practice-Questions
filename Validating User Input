@@ -12,7 +12,6 @@ public class Validation {
 	public static void validate() {
 
 		Scanner input = new Scanner(System.in);
-
 		// initializing variables in declarations
 		int passes = 0;
 		int failures = 0;
@@ -36,7 +35,6 @@ public class Validation {
 			}
 		}
 		input.close();  //closing the resources
-
 		System.out.printf("Passed: %d%nFailed: %d%n", passes, failures);
 		// determine whether more than 8 students passed
 		if (passes > 8)
