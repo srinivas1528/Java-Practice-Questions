@@ -4,16 +4,13 @@
  */
 
 package controlStatements;
-
 import java.util.Scanner;
 
 public class Triangle {
 
 	static int number1;
 	static int number2;
-	static int number3;
-	
-
+	static int number3;	
 	public static void userInput() {
 		Scanner input = new Scanner(System.in);
 		System.out.print("Enter first integer: "); // prompt
@@ -26,7 +23,6 @@ public class Triangle {
 	}
 
 	public static void triangleCheck() {
-
 		if (number1 + number2 <= number3 || number1 + number3 <= number2 || number2 + number3 <= number1) {
 			System.out.println("The given sides cannot represent the sides of a triangle");
 		} else {
