@@ -32,7 +32,7 @@ public class CompoundInterest {
 			System.out.printf("\n%s%10s%20s%n", "Year", "Rate", "Amount on deposit");
 		}
 	}
-//Driver Method to Compute theCompoundInterest.
+	//Driver Method to Compute theCompoundInterest.
 	public static void main(String[] args) {
 		CompoundInterest compObj = new CompoundInterest();
 		compObj.displayHeader();
