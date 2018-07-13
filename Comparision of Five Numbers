@@ -1,0 +1,66 @@
+/*Largest and Smallest Integers) Write an application that reads five integers and determines
+and prints the largest and smallest integers in the group. Use only the programming techniques you
+learned in this chapter.*/
+package comparision;
+
+import java.util.Scanner;
+
+public class ComparisionFive {
+
+	static int number1; // first number to compare
+	static int number2; // second number to compare
+	static int number3; // third number to compare
+	static int number4; // fourth number to compare
+	static int number5; // fifth number to compare
+
+	public static void userInput() {
+		// create Scanner to obtain input from command line
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter first integer: "); // prompt
+		number1 = input.nextInt(); // read first number from user
+		System.out.print("Enter second integer: "); // prompt
+		number2 = input.nextInt(); // read second number from user
+		System.out.print("Enter third integer: "); // prompt
+		number3 = input.nextInt(); // read third number from user
+		System.out.print("Enter fourth integer: "); // prompt
+		number4 = input.nextInt(); // read fourth number from user
+		System.out.print("Enter fifth integer: "); // prompt
+		number5 = input.nextInt(); // read fifth number from user
+		input.close();
+	}
+
+	public static void smallest() {
+		if (number1 <= number2 && number1 <= number3 && number1 <= number4 && number1 <= number5) {
+			System.out.println(number1 + " " + "is smaller");
+		} else if (number2 <= number3 && number2 <= number4 && number2 <= number5) {
+			System.out.println(number2 + " " + "is smaller");
+		} else if (number3 <= number4 && number3 <= number5) {
+			System.out.println(number3 + " " + "is smaller");
+		} else if (number4 <= number5) {
+			System.out.println(number4 + " " + "is smaller");
+		} else {
+			System.out.println(number5 + " " + "is smaller");
+		}
+	}
+
+	public static void largest() {
+		if (number1 >= number2 && number1 >= number3 && number1 >= number4 && number1 >= number5) {
+			System.out.println(number1 + " " + "is larger");
+		} else if (number2 >= number3 && number2 >= number4 && number2 >= number5) {
+			System.out.println(number2 + " " + "is larger");
+		} else if (number3 >= number4 && number3 >= number5) {
+			System.out.println(number3 + " " + "is larger");
+		} else if (number4 >= number5) {
+			System.out.println(number4 + " " + "is larger");
+		} else {
+			System.out.println(number5 + " " + "is larger");
+		}
+	}
+
+	// main method begins execution of Java application
+	public static void main(String[] args) {
+		ComparisionFive.userInput();
+		ComparisionFive.smallest();
+		ComparisionFive.largest();
+	}
+}
