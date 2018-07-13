@@ -1,0 +1,41 @@
+
+/*
+ * Write an application that estimates the value of the mathematical constant e by using
+the following formula. Allow the user to enter the number of terms to calculate.
+ * 
+ */
+package mathematicalConstant;
+import java.util.Scanner;
+
+public class MathematicalConstant {
+
+	private int number;
+	private double result = 1;
+
+	public void userInput() {
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter the number of terms to calculate the Mathematical Constant e: ");
+		number = input.nextInt();
+		input.close();
+	}
+
+	public void computeConstant() {
+		int i;
+		double fact=1;
+	 	  for(i=1;i<=number;i++){    
+		      fact=fact*i;    
+		      result =result + (double)(1/fact);
+		  }    
+	}
+
+	public void displayConstant() {
+		System.out.println("The Constant Value of Mathematical Cosntant e is : " + result);
+	}
+  
+	public static void main(String[] args) {	
+		MathematicalConstant conObj = new MathematicalConstant();
+		conObj.userInput();
+		conObj.computeConstant();
+		conObj.displayConstant();		
+	}
+}
