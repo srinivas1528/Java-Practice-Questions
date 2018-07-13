@@ -10,13 +10,11 @@ The decimal equivalent of binary 1101 is 1 * 1 + 0 * 2 + 1 * 4 + 1 * 8, or 1 + 0
  */
 
 package controlStatements;
-
 import java.util.Scanner;
 
 public class BinaryConversion {
 
 	static int number;
-
 	public static void userInput() {
 		// create Scanner to obtain input from command line
 		Scanner input = new Scanner(System.in);
@@ -35,7 +33,6 @@ public class BinaryConversion {
 			i++;
 		}
 		System.out.println("The Binary equivalent of " + number + " is : " + result);
-
 	}
 
 	// main method begins execution of Java application
@@ -43,5 +40,4 @@ public class BinaryConversion {
 		BinaryConversion.userInput();
 		BinaryConversion.convert();
 	}
-
 }
