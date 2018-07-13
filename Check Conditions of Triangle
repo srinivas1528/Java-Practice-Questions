@@ -1,0 +1,42 @@
+/*
+ * (Sides of a Triangle) Write an application that reads three nonzero values entered by the
+ *	user and determines and prints whether they could represent the sides of a triangle.
+ */
+
+package controlStatements;
+
+import java.util.Scanner;
+
+public class Triangle {
+
+	static int number1;
+	static int number2;
+	static int number3;
+	
+
+	public static void userInput() {
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter first integer: "); // prompt
+		number1 = input.nextInt(); // read first number from user
+		System.out.print("Enter second integer: "); // prompt
+		number2 = input.nextInt(); // read second number from user
+		System.out.print("Enter third integer: "); // prompt
+		number3 = input.nextInt(); // read third number from user
+		input.close();
+	}
+
+	public static void triangleCheck() {
+
+		if (number1 + number2 <= number3 || number1 + number3 <= number2 || number2 + number3 <= number1) {
+			System.out.println("The given sides cannot represent the sides of a triangle");
+		} else {
+			System.out.println("The given sides can represent the sides of a triangle");
+		}
+	}
+
+	// main method begins execution of Java application
+	public static void main(String[] args) {
+		Triangle.userInput();
+		Triangle.triangleCheck();
+	}
+}
