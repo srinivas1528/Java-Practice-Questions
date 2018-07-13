@@ -1,0 +1,48 @@
+/*
+ * 
+ * 
+ * 
+ * Write an application that computes the value of ex by using the following formula. Allow
+the user to enter the number of terms to calculate.
+ */
+
+package exponentialConstant;
+
+import java.util.Scanner;
+
+public class ExponentialConstant {
+
+	private int number;
+	private int x;
+	private double result = 1;
+
+	public void userInput() {
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter the number of terms to calculate the Mathematical Exponential Constant e: ");
+		number = input.nextInt();
+		System.out.print("Enter the Value of x: ");
+		x = input.nextInt();
+		input.close();
+	}
+
+	public void computeConstant() {
+		int i;
+		double fact = 1;
+		for (i = 1; i <= number; i++) {
+			fact = fact * i;
+			result = result + (double) (Math.pow(x, i) / fact);
+		}
+	}
+
+	public void displayConstant() {
+		System.out.println("The Exponential Value of Mathematical Cosntant e with power " + x + "is : " + result);
+	}
+
+	public static void main(String[] args) {
+		ExponentialConstant conObj = new ExponentialConstant();
+		conObj.userInput();
+		conObj.computeConstant();
+		conObj.displayConstant();
+	}
+}
+
